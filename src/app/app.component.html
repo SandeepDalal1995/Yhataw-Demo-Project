@@ -1,3 +1,92 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <!-- profile Menu -->
+  <ion-menu side="start" menuId="profileMenu">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Your Profile</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item lines="none">
+            <ion-icon name="person-circle-sharp" slot="start"></ion-icon>
+            <ion-label>Personal Details</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item lines="none">
+            <ion-icon name="call-sharp" slot="start"></ion-icon>
+            <ion-label>Contact Details</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- buses Menu -->
+  <ion-menu side="start" menuId="busesMenu">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>
+          Yhataw
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item lines="none">
+            <ion-icon name="person-circle-sharp" slot="start"></ion-icon>
+            <ion-label>Personal Details</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <!-- <ion-menu-toggle>
+          <ion-item lines="none">
+            <ion-icon name="call-sharp" slot="start"></ion-icon>
+            <ion-label>Surveyor-Admin Panel</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item lines="none">
+            <ion-icon name="receipt-sharp" slot="start"></ion-icon>
+            <ion-label>Property Manager-Admin Panel</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item lines="none">
+            <ion-icon name="key-sharp" slot="start"></ion-icon>
+            <ion-label>Sales Team-Admin Panel</ion-label>
+          </ion-item>
+        </ion-menu-toggle> -->
+        <ion-menu-toggle>
+          <ion-item lines="none" (click)="onLogout()" button>
+            <ion-icon name="exit-sharp" slot="start"></ion-icon>
+            <ion-label>Logout</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- bookingsMenu -->
+  <ion-menu side="start" menuId="bookingsMenu">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Your Bookings</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item lines="none">
+            <ion-icon name="radio-button-on-sharp" slot="start"></ion-icon>
+            <ion-label>Past Bookings</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet main></ion-router-outlet>
 </ion-app>
